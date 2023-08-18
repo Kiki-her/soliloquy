@@ -1,4 +1,4 @@
-html {
+/* html {
     box-sizing: border-box;
 }
 
@@ -8,7 +8,7 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-}
+} */
 
 body {
     background-color: #9DB2BF;
@@ -18,7 +18,7 @@ body {
 /* textfield  #DDE6ED*/
 /* header #526D82 */
 /* icon #27374D */
-section {
+/* section {
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
@@ -31,7 +31,7 @@ section {
     background: #fff;
     box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
 
-}
+} */
 
 header {
     display: flex;
