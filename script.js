@@ -21,7 +21,6 @@ function appendMessage(text) {
   
         <div class="msg-text">
           <div class="msg-info">
-            <div class="name">You</div>
             <div class="msg-time">${formatDate(new Date())}</div>
           </div>
           <div class="msg-main-text">${text}</div>
