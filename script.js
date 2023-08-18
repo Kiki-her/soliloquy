@@ -1,6 +1,7 @@
-const msgForm = document.getElementsByClassName("msg-form");
-const msgInput = document.getElementsByClassName("msg-input");
-const msgChat = document.getElementsByClassName("msg-chat");
+const msgForm = document.getElementsByClassName("msger-inputarea");
+const msgInput = document.getElementsByClassName("msger-input");
+const msgChat = document.getElementsByClassName("msger-chat");
+
 
 msgForm[0].addEventListener("submit", (e) => {
     e.preventDefault();
@@ -14,19 +15,19 @@ msgForm[0].addEventListener("submit", (e) => {
 })
 
 function appendMessage(text) {
-    //   Simple solution for small apps
     const msgHTML = `
-      <div class="right-msg">
-        <div class="msg-icon"></div>
-  
-        <div class="msg-text">
-          <div class="msg-info">
-            <div class="msg-time">${formatDate(new Date())}</div>
-          </div>
-          <div class="msg-main-text">${text}</div>
+    <div class="msg right-msg">
+      <div class="msg-img" ></div>
+
+      <div class="msg-bubble">
+        <div class="msg-info">
+          <div class="msg-info-time">${formatDate(new Date())}</div>
         </div>
+
+        <div class="msg-text">${text}</div>
       </div>
-    `;
+    </div>
+  `;
   
     msgChat[0].insertAdjacentHTML("beforeend", msgHTML);
     msgChat[0].scrollTop += 500;

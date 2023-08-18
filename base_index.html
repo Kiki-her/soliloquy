@@ -12,11 +12,24 @@
     <section class="msger">
         <header class="msger-header">
             <div class="msger-header-title">
-                <i class="fas fa-comment-alt"></i> SimpleChat
+                Soliloquy Chat
             </div>
-            <div class="msger-header-options">
+            <div class="label-wrap">
+                <label for="trigger" class="open"><img class="qst-button" src="images/questiion.png"></label>
+                <div class="popup-wrap">
+                    <input id="trigger" type="checkbox">
+                    <div class="popup-overlay">
+                        <label for="trigger" class="popup-trigger"></label>
+                        <div class="popup-content">
+                            <label for="trigger" class="close">×</label>
+                            <p>ここは1人専用のチャットルームです。<br>チャットに送った内容は、ページを閉じたら消えます。<br>"言えないけど言いたいこと"を吐き出すのにご利用ください。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="msger-header-options">
                 <span><i class="fas fa-cog"></i></span>
-            </div>
+            </div> -->
         </header>
 
         <main class="msger-chat">
@@ -58,6 +71,7 @@
             <button type="submit" class="msger-send-btn">Send</button>
         </form>
     </section>
+    <script src="script.js"></script>
 </body>
 
 </html>
