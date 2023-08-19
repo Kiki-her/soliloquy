@@ -72,6 +72,7 @@ body {
     background: #fff;
     line-height: 1.4em;
     transition: 0.5s;
+    padding: 15px;
     border-radius: 12px;
     box-shadow: 0 0 5px rgba(94, 94, 94, 0.7);
 }
