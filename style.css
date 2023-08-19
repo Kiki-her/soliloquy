@@ -31,6 +31,7 @@ body {
     height: 100%;
 }
 
+/* popup question button */
 .qst-button {
     width: 50px;
     padding: 10px;
@@ -102,12 +103,11 @@ body {
     padding: 5px 15px;
 }
 
-
-
 #trigger {
     display: none;
 }
 
+/* message section */
 
 .msger-header {
     display: flex;
@@ -186,8 +186,6 @@ body {
 .msg-info-time {
     font-size: 0.85em;
 }
-
-
 
 .right-msg {
     flex-direction: row-reverse;
