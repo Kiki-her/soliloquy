@@ -17,6 +17,7 @@ msgForm[0].addEventListener("submit", (e) => {
 })
 
 title[0].addEventListener("click", () => {
+  title[0].innerText = "LET'S BURN IT UP";
   msgChat[0].classList.add("msger-fire");
   main[0].classList.add("fire");
   setTimeout(() => {
