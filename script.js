@@ -26,21 +26,33 @@ title[0].addEventListener("click", () => {
 })
 
 function appendMessage(text) {
-    const msgHTML = `
-    <div class="msg right-msg">
-      <div class="msg-img" ></div>
-      <div class="msg-bubble">
-        <div class="msg-info">
-          <div class="msg-info-name"></div>
-          <div class="msg-info-time">${formatDate(new Date())}</div>
-        </div>
+    const parentDiv = document.createElement("div");
+    parentDiv.classList.add("msg", "right-msg");
 
-        <div class="msg-text">${text}</div>
-      </div>
-    </div>
-  `;
+    const imgDiv = document.createElement("div");
+    imgDiv.classList.add("msg-img");
+
+    const bubble = document.createElement("div");
+    bubble.classList.add("msg-bubble");
+
+    const infoDiv = document.createElement("div");
+    infoDiv.classList.add("msg-info");
+
+    const timeDiv = document.createElement("div");
+    timeDiv.classList.add("msg-info-time");
+    timeDiv.innerText = formatDate(new Date());
+
+    const textDiv = document.createElement("div");
+    textDiv.classList.add("msg-text");
+    textDiv.innerText = text;
+
+    const infoBlock = infoDiv.appendChild(timeDiv);
+    bubble.appendChild(infoBlock);
+    bubble.appendChild(textDiv);
+    parentDiv.appendChild(imgDiv);
+    parentDiv.appendChild(bubble);
   
-    msgChat[0].insertAdjacentHTML("beforeend", msgHTML);
+    msgChat[0].appendChild(parentDiv);
     msgChat[0].scrollTop += 500;
   }
 
