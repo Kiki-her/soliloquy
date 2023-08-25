@@ -25,40 +25,39 @@ title[0].addEventListener("click", () => {
   }, "4000")
 })
 
+
 function appendMessage(text) {
-    const parentDiv = document.createElement("div");
-    parentDiv.classList.add("msg", "right-msg");
-
-    const imgDiv = document.createElement("div");
-    imgDiv.classList.add("msg-img");
-
-    const bubble = document.createElement("div");
-    bubble.classList.add("msg-bubble");
-
-    const infoDiv = document.createElement("div");
-    infoDiv.classList.add("msg-info");
-
-    const timeDiv = document.createElement("div");
-    timeDiv.classList.add("msg-info-time");
-    timeDiv.innerText = formatDate(new Date());
-
-    const textDiv = document.createElement("div");
-    textDiv.classList.add("msg-text");
-    textDiv.innerText = text;
-
-    const infoBlock = infoDiv.appendChild(timeDiv);
-    bubble.appendChild(infoBlock);
-    bubble.appendChild(textDiv);
-    parentDiv.appendChild(imgDiv);
-    parentDiv.appendChild(bubble);
+  const parentDiv = createDiv(["msg", "right-msg"]);
+  const imgDiv = createDiv(["msg-img"]);
+  const bubble = createDiv(["msg-bubble"]);
+  const infoDiv = createDiv(["msg-info"]);
+  const timeDiv = createDiv(["msg-info-time"], formatDate(new Date()));
+  const textDiv = createDiv(["msg-text"], text);
   
-    msgChat[0].appendChild(parentDiv);
-    msgChat[0].scrollTop += 500;
-  }
+  const infoBlock = infoDiv.appendChild(timeDiv);
+  bubble.appendChild(infoBlock);
+  bubble.appendChild(textDiv);
+  parentDiv.appendChild(imgDiv);
+  parentDiv.appendChild(bubble);
+  
+  msgChat[0].appendChild(parentDiv);
+  msgChat[0].scrollTop += 500;
+}
 
 function formatDate(date) {
-    const hour = "0" + date.getHours();
-    const min = "0" + date.getMinutes();
+  const hour = "0" + date.getHours();
+  const min = "0" + date.getMinutes();
+  
+  return `${hour.slice(-2)}:${min.slice(-2)}`;
+}
 
-    return `${hour.slice(-2)}:${min.slice(-2)}`;
+function createDiv(classArr, inner) {
+  const newDiv = document.createElement("div");
+  if(classArr !== undefined) {
+    newDiv.classList.add(...classArr);
+  }
+  if(inner !== undefined) {
+    newDiv.innerText = inner;
+  }
+  return newDiv;
 }
