@@ -39,12 +39,13 @@ PC・スマートフォンどちらでも使用できます。
 
 ## デプロイ先
 
-- render
+- Render
 
 ## めちゃめちゃ参考CodePen
 
-chat
+- Simple Chat UI by Sajad Hashemian
 ( https://codepen.io/sajadhsm/pen/odaBdd )
 
-fire
+
+- CSS Only Fire by Simon Goellner
 ( https://codepen.io/simeydotme/pen/PoyzbPM )
