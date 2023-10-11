@@ -40,11 +40,19 @@ PC・スマートフォンどちらでも使用できます。
 
 - Render
 
-## めちゃめちゃ参考 CodePen
+## 参考
+
+以下を使用させていただきました、ありがとうございます。
+
+### CodePen
 
 - Simple Chat UI by Sajad Hashemian
   ( https://codepen.io/sajadhsm/pen/odaBdd )
 
-## GIF 画像
+### GIF 画像
 
 - GIFER より ( https://gifer.com/en/5GpM )
+
+### リセット CSS
+
+- [mayank99/reset.css](https://github.com/mayank99/reset.css)
