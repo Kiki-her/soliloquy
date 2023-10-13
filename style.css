@@ -200,7 +200,7 @@ body {
 
 .msg-bubble {
     max-width: 450px;
-    padding: 15px;
+    padding: 10px;
     border-radius: 15px;
 }
 
@@ -218,6 +218,8 @@ body {
 
 .msg-info-time {
     font-size: 0.85em;
+    float: left;
+    margin-left: -4em;
 }
 
 .right-msg {
